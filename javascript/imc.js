@@ -1,12 +1,13 @@
 function calcularIMC() {
     //entradas
-    let nomeUsuario = document.querySelector('.input-nome').Value;
-    let pesoUsuario = document.querySelector('.input-peso').Value;
-    let alturaUsuario = document.querySelector('.input-altura').Value;
+    let nomeUsuario = document.querySelector('.input-nome').value;
+    let pesoUsuario = parseFloat(document.querySelector('.input-peso').value.replace(',', '.'));
+    let alturaUsuario = parseFloat(document.querySelector('.input-altura').value.replace(',', '.'));
 
     //processamento
-    const resultadoIMC = pesoUsuario / alturaUsuario ^ 2;
+    const resultadoIMC = (pesoUsuario / alturaUsuario ** 2).toFixed(2);
     let grau, situacao;
+    console.log(resultadoIMC);
 
     if (resultadoIMC < 18.5) {
         grau = 0;
@@ -33,7 +34,7 @@ function calcularIMC() {
 
 
     //saída
-    let mensagem = `${nomeUsuario}, seu IMC é ${resultadoIMC}! Nível de Obesidade: ${situacao} e Grau: ${grau}`;
+    let mensagem = `${nomeUsuario}, seu IMC é ${resultadoIMC}! Nível: ${situacao} e Grau: ${grau}`;
 
     document.querySelector('.resultado').innerHTML = mensagem;
 

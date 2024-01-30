@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/imc.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="../Atividade03JavaScript/javascript/imc2.js" defer ></script>
 
     <title>IMC</title>
 </head>
@@ -16,18 +17,18 @@
         <form action="" id="form" method="post">
             <div>
                 <label for="input-nome">Nome:</label>
-                <input type="text" name="nomw" id="input-nome" placeholder="Digite seu nome completo...">
+                <input type="text" name="nome" class="input-nome" placeholder="Digite seu nome completo...">
             </div>
             <div>
                 <label for="input-peso">Qual seu peso?</label>
-                <input type="text" name="peso" id="input-peso" placeholder="0.0kg">
+                <input type="text" name="peso" class="input-peso" placeholder="0.0kg">
             </div>
             <div>
                 <label for="input-altura">Qual sua altura?</label>
-                <input type="text" name="altura" id="input-altura" placeholder="0,00m">
+                <input type="text" name="altura" class="input-altura" placeholder="0,00m">
             </div>
             <div>
-                <input type="button" value="Calcular IMC">
+                <input type="button" class="btn-calcular" value="Calcular IMC">
                 <input type="reset" value="Limpar Campos">
             </div>
             <div>
@@ -35,15 +36,8 @@
                 
             </div>
 
-
-
-
-
-
-
         </form>
-    </main>
-    <script src="../Atividade03JavaScript/javascript/imc.js"></script>
+    </main>   
 </body>
 
 </html>
